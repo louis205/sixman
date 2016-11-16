@@ -1,13 +1,5 @@
 package org.kosta.springmvc20;
 
-import javax.annotation.Resource;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.kosta.springmvc20.model.dao.MemberDAO;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
 /*
  *    TDD : 테스트 주도 개발(test-driven development, TDD)은 
  *            매우 짧은 개발 사이클을 반복하는 소프트웨어 개발 프로세스
@@ -29,6 +21,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
    <version>4.9</version>
    <scope>test</scope>
   </dependency>  */
+
+/*
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"file:src/main/webapp/WEB-INF/kosta-*.xml"})
 public class TestJUnit {
@@ -40,3 +34,4 @@ public class TestJUnit {
 		System.out.println(memberDAO.findMemberById("java"));
 	}
 }
+*/
