@@ -25,8 +25,8 @@ public class MemberDAOImpl implements MemberDAO {
 		return template.selectList("member.findMemberListByAddress",address);
 	}
 	@Override
-	public MemberVO login(MemberVO memberVO){
-		return template.selectOne("member.login",memberVO);
+	public MemberVO loginForm(MemberVO vo){
+		return template.selectOne("member.loginForm",vo);
 	}
 	@Override
 	public int getMemberCount(){
