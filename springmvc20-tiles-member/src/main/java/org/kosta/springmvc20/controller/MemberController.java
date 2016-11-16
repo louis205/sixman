@@ -18,7 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
  * Intercaptor를 적용해 일괄처리했으므로
  * enterCafe 와 update 관련 메서드에서 인증여부를 체크하는 로직은 필요없다
  * @author Jaeyoung
- *이거뭐야,,...
+ *이거뭐야,,... 하고 있는데~
  */
 @Controller
 public class MemberController {
