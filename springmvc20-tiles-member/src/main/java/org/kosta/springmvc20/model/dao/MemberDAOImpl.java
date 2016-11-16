@@ -21,7 +21,26 @@ public class MemberDAOImpl implements MemberDAO {
 	public List<MemberVO> findMemberListByAddress(String address){
 		return template.selectList("member.findMemberListByAddress",address);
 	}
-
+	@Override
+	public MemberVO loginForm(MemberVO vo){
+		return template.selectOne("member.loginForm",vo);
+	}
+	@Override
+	public int getMemberCount(){
+		return template.selectOne("member.getMemberCount");
+	}
+	@Override
+	public void updateMember(MemberVO vo) {
+		template.update("member.updateMember",vo);			
+	}	
+	@Override
+	public void registerMember(MemberVO vo) {
+		template.insert("member.registerMember",vo);			
+	}
+	@Override
+	public int idcheck(String id) {
+		return template.selectOne("member.idcheck",id);				
+	}
 }
 
 

@@ -3,11 +3,14 @@ package org.kosta.springmvc20.controller;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.kosta.springmvc20.model.dao.MemberDAO;
 import org.kosta.springmvc20.model.vo.MemberVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 /**
@@ -60,7 +63,24 @@ public class MemberController {
 		return memberDAO.findMemberListByAddress(address);
 	}
 	
-
+	@RequestMapping(value = "loginForm.do", method = RequestMethod.POST)
+	public ModelAndView loginForm(MemberVO vo, HttpServletRequest request) {
+		MemberVO mvo = memberDAO.loginForm(vo);
+		if (mvo != null) {
+			HttpSession session = request.getSession();
+			session.setAttribute("mvo", mvo);
+			return new ModelAndView("member/admin/login");
+		} else {
+			return new ModelAndView("login_fail");
+		}
+	}
+	@RequestMapping("logout.do")
+	public String logout(HttpServletRequest request){		
+			HttpSession session=request.getSession(false);
+			if(session!=null)
+				session.invalidate();
+			return "redirect:home.do";
+	}
 }
 
 

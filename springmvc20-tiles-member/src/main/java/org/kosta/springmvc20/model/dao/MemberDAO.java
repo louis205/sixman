@@ -18,6 +18,14 @@ public interface MemberDAO {
 
 	List<MemberVO> findMemberListByAddress(String address);
 
-	
+	MemberVO loginForm(MemberVO vo);
+
+	int getMemberCount();
+
+	void updateMember(MemberVO vo);
+
+	void registerMember(MemberVO vo);
+
+	int idcheck(String id);
 
 }

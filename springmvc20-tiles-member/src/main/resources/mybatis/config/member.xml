@@ -18,9 +18,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  		select id,name from spring_member
  		where address=#{value}
  	</select>
- 	<select id="login" resultType="memberVO" parameterType="memberVO">
- 		<include refid="selectMember"></include>
- 		where id=#{id} and password=#{password}
+ 	<select id="loginForm" resultType="memberVO">
+ 	select * from spring_member where id=#{id} and password=#{password}
  	</select>
  	<select id="getMemberCount" resultType="int">
  		select count(*) from spring_member
