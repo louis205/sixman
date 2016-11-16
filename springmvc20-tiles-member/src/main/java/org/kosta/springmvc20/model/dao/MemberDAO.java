@@ -4,6 +4,13 @@ import java.util.List;
 
 import org.kosta.springmvc20.model.vo.MemberVO;
 
+/**
+ * 야호야호
+ * @author Administrator
+ *
+ */
+
+
 public interface MemberDAO {
 
 	

@@ -3,16 +3,16 @@ package org.kosta.springmvc20.controller;
 import java.util.List;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.kosta.springmvc20.model.dao.MemberDAO;
 import org.kosta.springmvc20.model.vo.MemberVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+/**
+ * 야호야호
+ */
 /**
  * springmvc9 에서 적용했던 인증여부에 따른 처리는 
  * Intercaptor를 적용해 일괄처리했으므로
@@ -50,6 +50,7 @@ public class MemberController {
 	public List<MemberVO> findMemberListByAddress(String address){
 		return memberDAO.findMemberListByAddress(address);
 	}
+	
 
 }
 
