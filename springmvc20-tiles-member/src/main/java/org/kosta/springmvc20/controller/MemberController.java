@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 /**
- * 야호야호
+ * 야호야호jhjlhjk
  */
 /**
  * springmvc9 에서 적용했던 인증여부에 따른 처리는 
@@ -38,6 +38,15 @@ public class MemberController {
 	public String register(){
 		return "register";
 	}
+	
+	@RequestMapping("findMemberById.do")
+	public ModelAndView findMemberById(String id){
+		MemberVO vo=memberDAO.findMemberById(id);
+		if(vo==null)
+			return new ModelAndView("member/findMemberById_fail");
+		else
+			return new ModelAndView("member/findMemberById_ok","memberVO",vo);
+	}	
 	
 	
 	@RequestMapping("addressList.do")
