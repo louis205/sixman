@@ -43,7 +43,7 @@ public class MemberDAOImpl implements MemberDAO {
 	}
 	@Override
 	public MemberVO findMemberById(String id) {
-		// TODO Auto-generated method stub
+		// 이재영 고침
 		return null;
 	}
 }
