@@ -50,7 +50,25 @@ public class MemberController {
 	public List<MemberVO> findMemberListByAddress(String address){
 		return memberDAO.findMemberListByAddress(address);
 	}
-
+	
+	@RequestMapping(value = "loginForm.do", method = RequestMethod.POST)
+	public ModelAndView loginForm(MemberVO vo, HttpServletRequest request) {
+		MemberVO mvo = memberDAO.loginForm(vo);
+		if (mvo != null) {
+			HttpSession session = request.getSession();
+			session.setAttribute("mvo", mvo);
+			return new ModelAndView("member/admin/login");
+		} else {
+			return new ModelAndView("login_fail");
+		}
+	}
+	@RequestMapping("logout.do")
+	public String logout(HttpServletRequest request){		
+			HttpSession session=request.getSession(false);
+			if(session!=null)
+				session.invalidate();
+			return "redirect:home.do";
+	}
 }
 
 

@@ -12,7 +12,7 @@ public interface MemberDAO {
 
 	List<MemberVO> findMemberListByAddress(String address);
 
-	MemberVO login(MemberVO memberVO);
+	MemberVO loginForm(MemberVO vo);
 
 	int getMemberCount();
 
