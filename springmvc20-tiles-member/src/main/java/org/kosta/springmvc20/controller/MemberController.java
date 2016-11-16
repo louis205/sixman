@@ -16,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * 야호야호jhjlhjk
  */
-/**
+/**고치기
  * springmvc9 에서 적용했던 인증여부에 따른 처리는 
  * Intercaptor를 적용해 일괄처리했으므로
  * enterCafe 와 update 관련 메서드에서 인증여부를 체크하는 로직은 필요없다

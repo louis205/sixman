@@ -41,6 +41,11 @@ public class MemberDAOImpl implements MemberDAO {
 	public int idcheck(String id) {
 		return template.selectOne("member.idcheck",id);				
 	}
+	@Override
+	public MemberVO findMemberById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
 
 
